@@ -12,7 +12,12 @@ export async function getPosts({
 	options: Options
 }) {
 	const posts = []
-	for (const year of await fs.readdir(path.join(config.contentDir, 'posts'))) {
+	for (const year of await fs
+		.readdir(path.join(config.contentDir, 'posts'))
+		.catch((err) => {
+			if (err.code !== 'ENOENT') throw err
+			return []
+		})) {
 		if (year === 'drafts') continue
 
 		for (const post of await fs.readdir(path.join(config.contentDir, 'posts', year))) {
@@ -56,7 +61,12 @@ export async function getNotes({
 	options: Options
 }) {
 	const posts = []
-	for (const year of await fs.readdir(path.join(config.contentDir, 'notes'))) {
+	for (const year of await fs
+		.readdir(path.join(config.contentDir, 'notes'))
+		.catch((err) => {
+			if (err.code !== 'ENOENT') throw err
+			return []
+		})) {
 		if (year === 'drafts') continue
 
 		for (const post of await fs.readdir(path.join(config.contentDir, 'notes', year))) {
