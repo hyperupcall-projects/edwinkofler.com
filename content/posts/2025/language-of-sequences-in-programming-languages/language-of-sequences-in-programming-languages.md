@@ -1,7 +1,7 @@
 +++
 title = 'Language of Sequences in Programming Languages'
 author = 'Edwin Kofler'
-date = 2025-06-08 21:25:42Z
+date = 2025-06-09 00:00:00Z
 categories = []
 tags = ['programming-languages']
 +++
