@@ -69,7 +69,7 @@ export function createContent(config: Config, layoutData: LayoutData) {
 				</div>
 			</div>
 			<footer class="footer">
-				<p>© 2024 Edwin Kofler</p>
+				<p>© Edwin Kofler</p>
 			</footer>
 		</header>
 		<body>
