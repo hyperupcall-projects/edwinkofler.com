@@ -44,8 +44,7 @@ export async function getPosts({
 				}
 			})()
 			const slug = path.basename(path.dirname(transformUri(config, inputFile)))
-			const date = new Date(frontmatter.date.toISOString())
-			const dateNice = `${date.getUTCFullYear()}.${date.getUTCMonth()}.${date.getUTCDay()}`
+			const dateNice = formattedDate(new Date(frontmatter.date.toISOString()))
 			posts.push({ uri: `${year}/${post}`, frontmatter, slug, dateNice })
 		}
 	}
@@ -93,13 +92,19 @@ export async function getNotes({
 				}
 			})()
 			const slug = path.basename(transformUri(config, inputFile)).replace(/\.md$/, '')
-			const date = new Date(frontmatter.date.toISOString())
-			const dateNice = `${date.getUTCFullYear()}.${date.getUTCMonth()}.${date.getUTCDay()}`
+			const dateNice = formattedDate(new Date(frontmatter.date.toISOString()))
 			posts.push({ uri: `${year}/${post}`, frontmatter, slug, dateNice })
 		}
 	}
 
 	return posts
+}
+
+function formattedDate(date: Date) {
+	const year = date.getUTCFullYear()
+	const month = date.toLocaleDateString('en-US', { month: '2-digit' })
+	const day = date.toLocaleDateString('en-US', { day: '2-digit' })
+	return `${year}.${month}.${day}`
 }
 
 async function getInputFile(dir: string, dirname: string) {
