@@ -4,7 +4,7 @@ import type { Config, LayoutData, Frontmatter } from 'sauerkraut'
 
 export const title = 'Edwin Kofler'
 
-export function createHead(config: Config, layoutData, LayoutData) {
+export function createHead(config: Config, layoutData: LayoutData) {
 	const html = String.raw
 
 	return html`<link rel="stylesheet" href="/css/open-color.css" />

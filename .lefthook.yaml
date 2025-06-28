@@ -1,0 +1,4 @@
+assert_lefthook_installed: true
+pre-commit:
+  jobs:
+    - run: '../sauerkraut/bin/sauerkraut.js build'

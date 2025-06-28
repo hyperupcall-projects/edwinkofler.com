@@ -28,7 +28,7 @@ body {
 	height: 100%;
 	display: grid;
 	grid-template-columns: 250px 1fr;
-	gap: 12px;
+	gap: 24px;
 }
 
 h1,
@@ -160,8 +160,7 @@ a:hover {
 
 .markdown-body {
 	max-width: 1000px;
-	margin-block: 10px 30px !important;
-	margin-inline-start: 5px !important;
+	margin-block: 10px 20px !important;
 }
 
 @media (max-width: 800px) {
