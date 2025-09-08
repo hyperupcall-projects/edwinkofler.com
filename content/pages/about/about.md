@@ -6,7 +6,7 @@ I like to learn and solve problems. In my free time, I like to cook, learn, and 
 
 ## Now
 
-After having attended [El Camino College](https://www.elcamino.edu), I'm now transferring to [CSU Monterey Bay](https://csumb.edu).
+I'm currently a student at [CSU Monterey Bay](https://csumb.edu).
 
 ## Uses
 
