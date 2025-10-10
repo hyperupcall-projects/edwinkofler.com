@@ -178,12 +178,12 @@ a:hover {
 
 .Content {
 	overflow: auto;
+	padding-block: 20px !important;
+	padding-inline: 25px !important;
 }
 
 .markdown-body {
 	max-width: 1000px;
-	margin-block: 20px !important;
-	margin-inline: 25px !important;
 }
 
 @media (max-width: 800px) {

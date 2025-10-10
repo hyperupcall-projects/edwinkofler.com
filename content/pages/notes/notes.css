@@ -1,3 +1,7 @@
+main h1.page-title:first-child {
+	margin-block-end: 16px !important;
+}
+
 .post-entry h3 {
 	font-size: 20px;
 	font-weight: bold;
