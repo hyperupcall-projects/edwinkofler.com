@@ -7,10 +7,13 @@ export const title = 'Edwin Kofler'
 export function createHead(config: Config, layoutData: LayoutData) {
 	const html = String.raw
 
-	return html`<link rel="stylesheet" href="/css/open-color.css" />
+	return html`<link
+			rel="stylesheet"
+			href="/css/github-markdown-light-v5.7.0-modified.css"
+		/>
+		<link rel="stylesheet" href="/css/open-color.css" />
 		<link rel="stylesheet" href="/css/fonts.css" />
 		<link rel="stylesheet" href="/css/global.css" />
-		<link rel="stylesheet" href="/css/github-markdown-light-v5.7.0-modified.css" />
 		<script
 			data-goatcounter="https://edwinkofler-com.goatcounter.com/count"
 			async

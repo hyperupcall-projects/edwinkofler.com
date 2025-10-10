@@ -28,7 +28,7 @@ body {
 	height: 100%;
 	display: grid;
 	grid-template-columns: 250px 1fr;
-	gap: 24px;
+	gap: 8px;
 }
 
 h1,
@@ -69,6 +69,28 @@ a {
 
 a:hover {
 	background-color: var(--text-background-color);
+}
+
+.callout {
+	border-radius: 5px;
+	padding: 0.5rem;
+	margin-block: 0.5rem;
+}
+
+.callout p {
+	margin-block-end: 0 !important;
+}
+
+.callout.callout-warn {
+	background-color: #ffec99; /* oc-yellow-2 */
+}
+
+.callout.callout-info {
+	background-color: #a5d8ff; /* oc-yellow-2 */
+}
+
+.callout .callout-title {
+	margin-block-start: 0 !important;
 }
 
 .Header {
@@ -160,7 +182,8 @@ a:hover {
 
 .markdown-body {
 	max-width: 1000px;
-	margin-block: 10px 20px !important;
+	margin-block: 20px !important;
+	margin-inline: 25px !important;
 }
 
 @media (max-width: 800px) {
