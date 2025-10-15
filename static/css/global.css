@@ -19,8 +19,8 @@ html {
 }
 
 body {
-	font-family: 'Geologica', sans-serif;
-	font-weight: 500;
+	font-family: 'Geologica Variable', sans-serif;
+	font-weight: 100;
 	font-style: normal;
 	font-size: 18px;
 	color: var(--text-color-primary);
@@ -37,7 +37,22 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'IBM Plex Sans', sans-serif;
+	font-family: 'Nunito Variable', sans-serif;
+}
+
+.markdown-body h1 {
+	font-weight: 900;
+}
+
+.markdown-body h2 {
+	font-weight: 800;
+}
+
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	font-weight: 700;
 }
 
 tt,
@@ -45,7 +60,7 @@ code,
 samp,
 pre,
 kbd {
-	font-family: 'PT Mono', monospace;
+	font-family: 'JetBrains Mono Variable', monospace;
 	font-optical-sizing: auto;
 	font-weight: 300;
 	font-style: normal;
@@ -128,6 +143,7 @@ a:hover {
 
 	& h1 {
 		text-align: center;
+		font-weight: 700;
 	}
 
 	& h1:hover {
@@ -148,9 +164,8 @@ a:hover {
 	align-items: flex-end;
 	gap: 6px;
 	margin-inline-end: 10px;
-	font-family: 'IBM Plex Sans', sans-serif;
-	font-weight: 300;
-	font-style: normal;
+	font-family: 'Nunito Variable', sans-serif;
+	font-weight: 700;
 }
 
 .Header .links {
