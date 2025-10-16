@@ -21,9 +21,9 @@ export function createHead(config: Config, layoutData: LayoutData) {
 		></script>`
 }
 
-export function createContent(config: Config, layoutData: LayoutData) {
+export function createContent(config: Config, layoutData: LayoutData, params) {
 	const html = String.raw
-	layoutData
+
 	return html`<header class="Header">
 			<figure class="profile-picture_">
 				<a href="/">
@@ -79,7 +79,25 @@ export function createContent(config: Config, layoutData: LayoutData) {
 			${layoutData.inputFileType === 'markdown'
 				? html`<div class="Content">
 						<main class="markdown-body markdown-latex">
-							<h1>${layoutData.title}</h1>
+							${params.__date
+								? html` <h1
+											style="border-bottom: 0; padding-bottom: 0; margin-bottom: 0;"
+										>
+											${layoutData.title}
+										</h1>
+										<p style="margin-bottom: .3rem; font-weight: 500;">
+											${new Date(params.__date).toLocaleDateString('en-US', {
+												year: 'numeric',
+												month: 'long',
+												day: 'numeric',
+											})}
+										</p>
+										<div
+											style="border-bottom: 1px solid #d1d9e0b3; margin-bottom: 16px"
+										></div>`
+								: `<h1>
+									${layoutData.title}
+								</h1>`}
 							${layoutData.body}
 						</main>
 					</div>`
