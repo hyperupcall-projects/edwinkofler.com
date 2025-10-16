@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       sauerkraut:
-        specifier: ^0.9.0
-        version: 0.9.0(typescript@5.6.3)
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.6.3)
       smol-toml:
         specifier: ^1.3.4
         version: 1.3.4
@@ -928,9 +928,6 @@ packages:
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
-
-  '@types/estree@1.0.7':
-    resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -2418,10 +2415,6 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
-  lru-cache@11.0.2:
-    resolution: {integrity: sha512-123qHRfJBmo2jXDbo/a5YOQrJoHF/GNQTLzQ5+IdK5pWpceK17yRc6ozlWd25FxvGKQbIUs91fDFkXmDHTKcyA==}
-    engines: {node: 20 || >=22}
-
   lru-cache@11.2.2:
     resolution: {integrity: sha512-F9ODfyqML2coTIsQpSkRHnLSZMtkU8Q+mSfcaIyKwy58u+8k5nvAYeiNhsyMARvzNcXJ9QfWVrcPsC9e9rAxtg==}
     engines: {node: 20 || >=22}
@@ -3169,8 +3162,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sauerkraut@0.9.0:
-    resolution: {integrity: sha512-bT91O8MyfdSaX8+yqjKigqrOX16g/FChDDx3I0TGcvqn7cBkdNRc28TKxHy1fZSg8XalWgWQgDBfGiV5/5AHLQ==}
+  sauerkraut@0.9.1:
+    resolution: {integrity: sha512-4WbBiib54OTqhvDibjrm5pKgMEwm9Pg6DHiO0R9RCdGvFbU1EWOZ5pbk2LPeMMJ/5vai+MGEKskRrgsmPDKFXw==}
     hasBin: true
 
   scheduler@0.23.2:
@@ -4061,9 +4054,9 @@ snapshots:
   '@markwhen/parser@0.13.7':
     dependencies:
       ical.js: 1.5.0
-      lru-cache: 11.0.2
+      lru-cache: 11.2.2
       luxon: 3.6.1
-      yaml: 2.6.0
+      yaml: 2.8.1
 
   '@markwhen/parser@0.14.19':
     dependencies:
@@ -4079,7 +4072,7 @@ snapshots:
     dependencies:
       lru-cache: 7.18.3
       luxon: 3.6.1
-      yaml: 2.6.0
+      yaml: 2.8.1
 
   '@markwhen/resume@1.1.0(typescript@5.6.3)':
     dependencies:
@@ -4312,7 +4305,7 @@ snapshots:
 
   '@rollup/pluginutils@5.1.4(rollup@4.52.4)':
     dependencies:
-      '@types/estree': 1.0.7
+      '@types/estree': 1.0.8
       estree-walker: 2.0.2
       picomatch: 4.0.2
     optionalDependencies:
@@ -4633,8 +4626,6 @@ snapshots:
       '@types/estree': 1.0.6
 
   '@types/estree@1.0.6': {}
-
-  '@types/estree@1.0.7': {}
 
   '@types/estree@1.0.8': {}
 
@@ -6273,8 +6264,6 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
-  lru-cache@11.0.2: {}
-
   lru-cache@11.2.2: {}
 
   lru-cache@7.18.3: {}
@@ -7026,7 +7015,7 @@ snapshots:
 
   path-scurry@2.0.0:
     dependencies:
-      lru-cache: 11.0.2
+      lru-cache: 11.2.2
       minipass: 7.1.2
 
   path-to-regexp@8.2.0: {}
@@ -7294,7 +7283,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sauerkraut@0.9.0(typescript@5.6.3):
+  sauerkraut@0.9.1(typescript@5.6.3):
     dependencies:
       '@markwhen/calendar': 1.3.5
       '@markwhen/parser': 0.14.19
