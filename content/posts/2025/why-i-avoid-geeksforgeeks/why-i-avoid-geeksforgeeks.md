@@ -93,6 +93,8 @@ Hopefully, I have established that GeeksForGeeks is consistently:
 - Not up to date
 - Missing important details
 
+If they can't get the details right for web development, should one expect them to for any other topic?
+
 And GeeksForGeeks is certainly not alone. For example, W3Schools was [notoriously](https://web.archive.org/web/20120405103802/http://w3fools.com) [unreliable](https://meta.stackoverflow.com/questions/280478/why-not-w3schools-com) until the late 2010s. [tutorialspoint](https://www.tutorialspoint.com/) shares many of the same problems. Nowadays, there are also AI-generated copycats that aren't even worth including in search results. Besides having bad information, these sorts of websites also:
 
 - Omit authors on articles
@@ -103,18 +105,20 @@ The presentation inconsistencies take attention away from the programming conten
 
 ## Alternatives
 
-For web development, there is no shortage of supply of resources. I recommend these alternatives:
+For web development, there is no shortage of supply of resources. I recommend these alternatives the most:
 
 - [MDN](https://developer.mozilla.org)
 - [web.dev](https://web.dev)
 - [CSS Tricks](https://css-tricks.com)
-- [JavaScript.info](https://javascript.info)
 
-From beginners to experts, the gold standard for HTML, CSS, and JavaScript is considered to be MDN. CSS Tricks is a delightful resource and web.dev is definitely worth mentioning. JavaScript.info is mostly for beginners, however.
+From beginners to experts, the gold standard for HTML, CSS, and JavaScript is considered to be MDN. CSS Tricks is a delightful resource and web.dev is definitely worth mentioning. For a more comprehensive list that includes books, podcasts, and people, check out the [State of JS](https://2024.stateofjs.com/en-US/resources/) and [State of CSS](https://2024.stateofcss.com/en-US/resources/) surveys!
 
-For a more comprehensive list that includes books, podcasts, and people, check out the [State of JS](https://2024.stateofjs.com/en-US/resources/) and [State of CSS](https://2024.stateofcss.com/en-US/resources/) surveys!
+There are alternatives for other areas of computer science as well:
 
-For other areas of computer science, I absolutely have other resources to share. But, I don't think they would all exactly fit in this blog post. So, I'll publish these resources somewhere else some other time!
+- **Web:** [JavaScript.info](https://javascript.info), [Piccalilli](https://piccalil.li), [Smashing Magazine](https://www.smashingmagazine.com/)
+- **C/C++:** [Learn C++](https://learncpp.com), [CppReference](https://www.cppreference.com), [isocpp.org](https://isocpp.org)
+- **Python:** [Official Python Tutorial](https://docs.python.org/3/tutorial/index.html), [RealPython](https://realpython.com/), [Python Morsels](https://www.pythonmorsels.com)
+- **Data Structures & Algorithms:** [cp-algorithms.com](https://cp-algorithms.com), [algo.monster](https://algo.monster/problems/stats), [visualgo.net](https://visualgo.net), [USACO Guide](https://usaco.guide)
 
 A bonus tip, if you want search results to show color like in the first image, install the [uBlacklist browser extension](https://ublacklist.github.io/). I have my own [configuration](https://github.com/hyperupcall/dotfiles/blob/trunk/config/ublacklist.txt) that includes:
 
