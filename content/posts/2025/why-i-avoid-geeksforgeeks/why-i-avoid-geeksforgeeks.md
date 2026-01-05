@@ -53,7 +53,7 @@ It's time to switch gears and move on to some non-diagram things:
 
 It's starts out fine, but it goes from mediocre to confusing for the bullet points.
 
-For JavaScript/Node.js, it's the only bullet that mentions use by big companies; am I to assume that those other languages aren't used by big companies? For PHP, they should mention it's deep role in early web development, and it's popularity. For Ruby, they don't mention Ruby on Rails, even though Ruby is usually only really used with Ruby on Rails.
+For JavaScript/Node.js, it's the only bullet point that mentions use by big companies; am I to assume that those other languages aren't used by big companies? For PHP, they should mention it's deep role in early web development, and it's popularity. For Ruby, they don't mention Ruby on Rails, even though Ruby is usually only really used with Ruby on Rails.
 
 In general, I think it's weird to mention superficial (in this context) attributes like "object-oriented language", "modern" , "widely used", and "easy to use". It's 2025 and all the most popular ("backend") languages are pretty much multi-paradigm and are easy enough to use. This isn't C++ or Bash.
 
@@ -100,8 +100,6 @@ And GeeksForGeeks is certainly not alone. For example, W3Schools was [notoriousl
 - Excessively use third person pronouns in their "technical writing"
 
 The presentation inconsistencies take attention away from the programming content. The conceptual inaccuracies seed distrust and disfavor.
-
-If you have decent expertise and still use GeeksForGeeks, I'd like to remind you of the [Gell-Man amnesia effect](https://en.wikipedia.org/wiki/Gell-Mann_amnesia_effect).
 
 ## Alternatives
 
