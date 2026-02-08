@@ -45,7 +45,7 @@ Things get a bit more crazy when moving to the backend development diagram:
 
 ![](./geeksforgeeks5.png)
 
-The diagram doesn't make clear that `npm`, `yarn`, and `pnpm` are only used for JavaScript projects. It's also weird to group those tools along with Git and GitHub under the title "Project Manager". This feels the most aggregious out of the errors so far.
+The diagram doesn't make clear that `npm`, `yarn`, and `pnpm` are only really used for JavaScript projects. It's also weird to group those tools along with Git and GitHub under the title "Project Manager". This feels the most aggregious out of the errors so far.
 
 It's time to switch gears and move on to some non-diagram things:
 
@@ -70,7 +70,7 @@ I'm almost done now. I'm going to visit 2 more pages. First, Node.js:
 
 ![](./geeksforgeeks7.png)
 
-The sentence "It allows you to run JavaScript code outside the browser, making it ideal for building scalable server-side and networking applications" should use "making it possible" instead of "making it ideal". That more properly emphasizes that Node.js was fundamental for server-side JavaScript.
+The sentence "It allows you to run JavaScript code outside the browser, making it ideal for building scalable server-side and networking applications" should use "making it possible" instead of "making it ideal". That more properly emphasizes that Node.js [was fundamental](https://www.youtube.com/watch?v=EeYvFl7li9E) for server-side JavaScript.
 
 Also, `npm` [doesn't stand for](https://github.com/npm/cli#is-npm-an-acronym-for-node-package-manager) "Node Package Manager".
 
@@ -93,7 +93,7 @@ Hopefully, I have established that GeeksForGeeks is consistently:
 - Not up to date
 - Missing important details
 
-If they can't get the details right for web development, should one expect them to for any other topic?
+If they can't get the details right for web development, should they be expected to for any other topic?
 
 And GeeksForGeeks is certainly not alone. For example, W3Schools was [notoriously](https://web.archive.org/web/20120405103802/http://w3fools.com) [unreliable](https://meta.stackoverflow.com/questions/280478/why-not-w3schools-com) until the late 2010s. [tutorialspoint](https://www.tutorialspoint.com/) shares many of the same problems. Nowadays, there are also AI-generated copycats that aren't even worth including in search results. Besides having bad information, these sorts of websites also:
 
@@ -102,6 +102,8 @@ And GeeksForGeeks is certainly not alone. For example, W3Schools was [notoriousl
 - Excessively use third person pronouns in their "technical writing"
 
 The presentation inconsistencies take attention away from the programming content. The conceptual inaccuracies seed distrust and disfavor.
+
+To be clear, I'm not saying that GeeksForGeeks should _never_ be used. Sometimes, they're one of the only results that explains a topic in an accessible way. Many articles also include basic code snippets that are _mostly correct_. I'm only saying keep this information in mind when you read their technical writing.
 
 ## Alternatives
 
