@@ -6,7 +6,7 @@ categories = []
 tags = ['nodejs']
 +++
 
-> [!info] Info: CSU Montertey Bay Students
+> [!info] Info: CSU Monterey Bay Students
 > If you attend [California State University, Monterey Bay](https://csumb.edu), feel free to reach out to me if you need help! I'm on the school's Slack.
 
 Recently, there has been a wave of WILD supply chain attacks on npm. Wild not because they were particularly technically sophisticated, but because of their recent frequency and impact.
@@ -20,21 +20,24 @@ The effects of these attacks have mostly been limited to stealing credentials an
 
 ## Supply Chain Attack
 
-This form of "supply chain attack" targets software dependencies. For example, suppose that your software project depends on a library called "liba", and let's say that "liba" also depends on another library called "libf". If you update "liba" then it is possible that "libf" is updated as well (the maintainers of "liba" may update "libf" without your knowledge). Now, suppose that a malicious actor publishes a new version of "libf" that contains malicious code. If "liba" updates to that version, and if you download the latest version of "liba", then you will install the malicious "libf" as well. If "libf" is a package that many developers (millions) depend on, then it has the potential to cause catestrophic damage.
+This form of "supply chain attack" targets software dependencies. For example, suppose that your software project depends on a library called "liba", and let's say that "liba" also depends on another library called "libf". If you update "liba" then it is possible that "libf" is updated as well (the maintainers of "liba" may update "libf" without your knowledge). Now, suppose that a malicious actor publishes a new version of "libf" that contains malicious code. If "liba" updates to that version, and if you download the latest version of "liba", then you will install the malicious "libf" as well. If "libf" is a package that many developers (millions) depend on, then it has the potential to cause catastrophic damage.
 
 For a more in-depth explanation, see [Cloudflare's](https://www.cloudflare.com/learning/security/what-is-a-supply-chain-attack/) or [Wikipedia](https://en.wikipedia.org/wiki/Supply_chain_attack).
 
 When a supply chain attack occurs, it usually follows a pattern:
 
 1. A malicious actor uploads a new version of a popular software library
-3. Other application and libraries update to the malicious version (without knowing that it is malicious)
-4. A few hours goes by. Somebody notices that the new version is malicious. The malicious version is "unpublished" and people try to revert to using the unmalicious version.
+2. Other application and libraries update to the malicious version (without knowing that it is malicious)
+3. A few hours goes by. Somebody notices that the new version is malicious. The malicious version is "unpublished" and people try to revert to using the unmalicious version.
 
 Let's say you are using `npm` to install dependencies. Once you run `npm install`, then by default, the newest available versions of all packages will be installed.
 
 What if all packages must be at least several hours old before they are installed? Using the previous example, if a malicious "libf" version is published, by the time we wait several hours, the malicious version would likely be detected and "unpublished".
 
 It's not possible to configure this "wait time" with `npm`, but it is possible through a similar tool called `pnpm`, using the `minimumReleaseAge` configuration key.
+
+> [!info] Info
+> In the time after publishing this post, npm [has added support](https://github.com/npm/cli/pull/8965) for `minimum-release-age`, but it is yet to be included in a released.
 
 ## Installing `pnpm`
 
@@ -64,36 +67,24 @@ Now that `pnpm` is installed, we now must configure it so that packages have a "
 >
 > `minimumReleaseAge` defines the minimum number of minutes that must pass after a version is published before pnpm will install it. This applies to **all dependencies**, including transitive ones.
 
-To set this, first create a file in `~/.config/pnpm/rc`:
+To set this, run these commands:
 
-> [!warn] Warning: Windows
-> If you are using Windows, you'll _most likely_ want to create this file at `C:\Users\<USERNAME>\AppData\Local\pnpm\config\rc` instead. See the [source](https://github.com/pnpm/pnpm/blob/986516756c3a926b962c4db3fafa94cdb499f0eb/config/config/src/dirs.ts#L67) for details. Also, instead of `touch` and `mkdir -p` (used below), use `New-Item -ItemType File <FILENAME>` and `mkdir <DIRECTORY>`, respectively.
-
-> [!warn] Warning: macOS
-> If you are using macOS, you'll _most likely_ want to create this file at `/Users/<USERNAME>/Library/Preferences/pnpm/rc` instead. See the [source](https://github.com/pnpm/pnpm/blob/986516756c3a926b962c4db3fafa94cdb499f0eb/config/config/src/dirs.ts#L67) for details.
-
-```console
-mkdir -p ~/.config/pnpm
-touch ~/.config/pnpm/rc
+```bash
+pnpm config set minimumReleaseAge 2880
+pnpm config set shamefullyHoist true
 ```
 
-In `~/.config/pnpm/rc`, add:
-
-```yaml
-minimumReleaseAge = 2880
-shamefullyHoist = true
-```
-
-`minimumReleaseAge` is set to `2880` minutes, or 2 days. So, you'll have a "buffer zone" of 2 days for people to identify detect malicious packages. That is a bit high; you can make it smaller if you'd like.
+`minimumReleaseAge` is set to `2880` minutes, or 2 days. So, you'll have a "buffer zone" of 2 days for people to identify and detect malicious packages. Note that since [pnpm v11](https://pnpm.io/blog/releases/11.0), the default is 1 day.
 
 `shamefullyHoist` isn't related to improving security. By default, `pnpm` writes dependencies to `node_modules/` a little differently than `npm`. This configuration changes `pnpm` to better match `npm`'s behavior. I'm adding this so people less familiar with the Node.js ecosystem potentially run into less issues when using `pnpm`. If you're more experienced, feel free to ignore this.
+
+On Linux, the pnpm configuration is usually stored in the file at `~/.config/pnpm/rc`. On Windows it's [usually stored](https://github.com/pnpm/pnpm/blob/986516756c3a926b962c4db3fafa94cdb499f0eb/config/config/src/dirs.ts#L67) at `C:\Users\<USERNAME>\AppData\Local\pnpm\config\rc`, while on macOS, it's [usually stored](https://github.com/pnpm/pnpm/blob/986516756c3a926b962c4db3fafa94cdb499f0eb/config/config/src/dirs.ts#L67) at `/Users/<USERNAME>/Library/Preferences/pnpm/rc`.
 
 Now, let's verify the configuration:
 
 ```console
 $ pnpm config list
 access=public
-git-tag-version=true
 message=v%s
 minimumReleaseAge=2880
 registry=https://registry.npmjs.org/
